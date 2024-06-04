@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-    <PrefectureList @update:selectedPrefectures="handleSelectedPrefectures" />
-    <LineChart :selectedPrefectures="selectedPrefectures" />
+    <h1>RESAS API</h1>
+    <PrefectureList
+      :selectedPrefectures="selectedPrefectures"
+      @update:selectedPrefectures="handleSelectedPrefectures"
+    />
+    <LineChart
+      :selectedPrefectures="selectedPrefectures"
+      @update:selectedPrefectures="handleSelectedPrefectures"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import PrefectureList from './components/PrefectureList.vue';
-import LineChart from './components/LineChart.vue';
+import { ref } from "vue";
+import PrefectureList from "./components/PrefectureList.vue";
+import LineChart from "./components/LineChart.vue";
 
 const selectedPrefectures = ref([]);
 
@@ -20,7 +27,7 @@ const handleSelectedPrefectures = (prefectures) => {
 <style scoped>
 #app {
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
 }
 </style>
