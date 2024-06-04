@@ -63,11 +63,10 @@ const toggleSelection = (prefCode) => {
 <style scoped>
 .prefecture-list {
   max-width: 960px;
-  margin: auto;
+  margin: 0 auto 20px;
   display: flex;
   flex-wrap: wrap;
   grid-gap: 24px;
-  padding: 20px;
 }
 li {
   list-style-type: none;
